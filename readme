@@ -17,13 +17,13 @@ This application generates random responses based on a list of famous persons in
 
 1. Build the Docker image:
 
-    ```bash
+    ```
     docker build -t ScientistSpotlight .
     ```
 
 2. Run the Docker container, passing in your OpenAI API key as an environment variable and mapping a volume to the `/app` directory in the container:
 
-    ```bash
+    ```
     docker run -e OPENAI_API_KEY=your_openai_api_key -v /path/to/your/host/directory/fame_persons.txt:/app/fame_persons.txt ScientistSpotlight
     ```
 
