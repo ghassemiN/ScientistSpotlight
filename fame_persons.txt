@@ -1,1 +1,2 @@
-openai==1.8.0
+Marie Curie
+Albert Einstein

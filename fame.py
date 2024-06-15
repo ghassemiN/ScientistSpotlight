@@ -1,12 +1,11 @@
 from openai import OpenAI
 from pathlib import Path
 import os ,json
-from credentials import OPENAI_API_KEY
 
 
-# Get the OpenAI key from the environment variables
-
-openai_key = OPENAI_API_KEY
+openai_key = os.getenv('OPENAI_API_KEY')
+if not openai_key:
+    raise ValueError("API key is not set")
 
 client = OpenAI(api_key=openai_key)
 
